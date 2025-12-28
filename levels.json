@@ -1,0 +1,121 @@
+[
+  {
+    "id": 1,
+    "name": "Stereo Madness",
+    "creator": "RobTop",
+    "description": "The first level in Geometry Dash",
+    "copies": [
+      {
+        "id": 1,
+        "name": "Original",
+        "creator": "RobTop",
+        "status": "approved",
+        "reason": "Original level by RobTop"
+      },
+      {
+        "id": 1001,
+        "name": "Remastered Version",
+        "creator": "Player123",
+        "status": "approved",
+        "reason": "High quality remaster with improved gameplay"
+      },
+      {
+        "id": 2001,
+        "name": "Speedrun Copy",
+        "creator": "CopyMaster",
+        "status": "pending",
+        "reason": "Under review for speedrun category"
+      },
+      {
+        "id": 3001,
+        "name": "Bad Recreation",
+        "creator": "BadCopy",
+        "status": "rejected",
+        "reason": "Poor quality recreation with many errors"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Back On Track",
+    "creator": "RobTop",
+    "description": "The second level in Geometry Dash",
+    "copies": [
+      {
+        "id": 2,
+        "name": "Original",
+        "creator": "RobTop",
+        "status": "approved"
+      },
+      {
+        "id": 1002,
+        "name": "Community Remake",
+        "creator": "LevelFan",
+        "status": "approved",
+        "reason": "Faithful recreation approved by community"
+      },
+      {
+        "id": 2002,
+        "name": "New Creator Attempt",
+        "creator": "NewCreator",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Polargeist",
+    "creator": "RobTop",
+    "description": "The third level in Geometry Dash",
+    "copies": [
+      {
+        "id": 3,
+        "name": "Original",
+        "creator": "RobTop",
+        "status": "approved"
+      },
+      {
+        "id": 1003,
+        "name": "Enhanced Edition",
+        "creator": "CoolPlayer",
+        "status": "approved",
+        "reason": "Enhanced visuals while maintaining original gameplay"
+      }
+    ]
+  },
+  {
+    "id": 1000001,
+    "name": "Bloodbath",
+    "creator": "Riot",
+    "description": "Extreme Demon difficulty level",
+    "copies": [
+      {
+        "id": 1000001,
+        "name": "Original",
+        "creator": "Riot",
+        "status": "approved"
+      },
+      {
+        "id": 1100001,
+        "name": "Verified Copy",
+        "creator": "DemonHunter",
+        "status": "approved",
+        "reason": "Verified 100% accurate copy"
+      },
+      {
+        "id": 1200001,
+        "name": "Incomplete Copy",
+        "creator": "CopyAttempt",
+        "status": "rejected",
+        "reason": "Missing key gameplay elements and decorations"
+      }
+    ]
+  },
+  {
+    "id": 1000002,
+    "name": "Cataclysm",
+    "creator": "Ggb0y",
+    "description": "Extreme Demon difficulty level",
+    "copies": []
+  }
+]

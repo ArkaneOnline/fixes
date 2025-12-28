@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Dash Level Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Geometry Dash Level Tracker</h1>
+            <p class="subtitle">Track copies of Geometry Dash levels and their approval status</p>
+            <a href="moderator.html" class="moderator-link">Moderator Panel</a>
+        </header>
+
+        <div class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search by level name, creator, or ID..."
+                    autocomplete="off"
+                >
+                <button id="clearButton" class="clear-btn" style="display: none;">Clear</button>
+            </div>
+            <div class="results-info">
+                <span id="resultsCount">0</span> level(s) found
+            </div>
+        </div>
+
+        <div id="levelsContainer" class="levels-container">
+            <!-- Levels will be dynamically inserted here -->
+        </div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            <p>No levels found matching your search.</p>
+        </div>
+    </div>
+
+    <div id="pagination" class="pagination" style="display: none;">
+        <!-- Pagination controls will be dynamically inserted here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

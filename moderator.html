@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderator Panel - Geometry Dash Level Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="moderator.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Moderator Panel</h1>
+            <p class="subtitle">Edit and manage Geometry Dash level data</p>
+        </header>
+
+        <div class="toolbar">
+            <div class="toolbar-left">
+                <button id="addLevelBtn" class="btn btn-primary">+ Add Level</button>
+                <button id="downloadBtn" class="btn btn-success">Download JSON</button>
+            </div>
+            <div class="toolbar-right">
+                <a href="index.html" class="btn btn-secondary">Back to Main</a>
+            </div>
+        </div>
+
+        <div class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search by level name, creator, ID, or copy details..."
+                    autocomplete="off"
+                >
+                <button id="clearButton" class="clear-btn" style="display: none;">Clear</button>
+            </div>
+            <div class="results-info">
+                <span id="resultsCount">0</span> level(s) found
+            </div>
+        </div>
+
+        <div id="levelsList" class="levels-list">
+            <!-- Levels will be dynamically inserted here -->
+        </div>
+
+        <div id="noLevels" class="no-results" style="display: none;">
+            <p>No levels found matching your search.</p>
+        </div>
+    </div>
+
+    <div id="pagination" class="pagination" style="display: none;">
+        <!-- Pagination controls will be dynamically inserted here -->
+    </div>
+
+    <!-- Level Edit Modal -->
+    <div id="levelModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Edit Level</h2>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="levelForm">
+                    <div class="form-group">
+                        <label for="levelId">Level ID *</label>
+                        <input type="number" id="levelId" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="levelName">Level Name *</label>
+                        <input type="text" id="levelName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="levelCreator">Creator *</label>
+                        <input type="text" id="levelCreator" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="levelDescription">Description</label>
+                        <textarea id="levelDescription" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Copies</label>
+                        <div id="copiesList" class="copies-list-editor">
+                            <!-- Copies will be inserted here -->
+                        </div>
+                        <button type="button" class="btn btn-small" id="addCopyBtn">+ Add Copy</button>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Level</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copy Edit Modal -->
+    <div id="copyModal" class="modal" style="display: none;">
+        <div class="modal-content modal-small">
+            <div class="modal-header">
+                <h2 id="copyModalTitle">Edit Copy</h2>
+                <button class="modal-close" id="closeCopyModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="copyForm">
+                    <div class="form-group">
+                        <label for="copyId">Copy ID *</label>
+                        <input type="number" id="copyId" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="copyName">Copy Name *</label>
+                        <input type="text" id="copyName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="copyCreator">Creator *</label>
+                        <input type="text" id="copyCreator" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="copyStatus">Status *</label>
+                        <select id="copyStatus" required>
+                            <option value="approved">Approved</option>
+                            <option value="pending">Pending</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="copyReason">Reason</label>
+                        <textarea id="copyReason" rows="3"></textarea>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelCopyBtn">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Copy</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="moderator.js"></script>
+</body>
+</html>
+
