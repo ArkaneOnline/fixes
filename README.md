@@ -123,6 +123,81 @@ To test the site locally:
 - Safari (latest)
 - Edge (latest)
 
+## API Usage
+
+The site includes an API for accessing level data programmatically.
+
+### Method 1: JavaScript API Class
+
+Include `api.js` in your page and use the `GDLevelAPI` class:
+
+```html
+<script src="api.js"></script>
+<script>
+    const api = new GDLevelAPI();
+    
+    // Get level by name (partial match, case-insensitive)
+    api.getLevelByName('Stereo').then(level => {
+        console.log(level);
+    });
+    
+    // Get level by exact name
+    api.getLevelByExactName('Stereo Madness').then(level => {
+        console.log(level);
+    });
+    
+    // Get level by ID
+    api.getLevelById(1).then(level => {
+        console.log(level);
+    });
+    
+    // Search levels
+    api.searchLevels('RobTop').then(levels => {
+        console.log(levels);
+    });
+</script>
+```
+
+### Method 2: Direct URL Access
+
+Access the API directly via URL parameters:
+
+```
+# Get level by name
+https://yourusername.github.io/repo/api.html?name=Stereo%20Madness
+
+# Get level by ID
+https://yourusername.github.io/repo/api.html?id=1
+```
+
+The response will be JSON that can be consumed by any application.
+
+### Method 3: Fetch API (from external site)
+
+Use fetch to get data from the URL endpoint:
+
+```javascript
+fetch('https://yourusername.github.io/repo/api.html?name=Stereo%20Madness')
+    .then(response => response.text())
+    .then(text => {
+        const level = JSON.parse(text);
+        console.log(level);
+    });
+```
+
+**Note**: Due to CORS restrictions, external sites may need to use a CORS proxy or the API may need to be accessed from the same domain.
+
+### API Methods
+
+- `getLevelByName(name)` - Get level by name (partial match, case-insensitive)
+- `getLevelByExactName(name)` - Get level by exact name match
+- `getLevelById(id)` - Get level by ID
+- `searchLevels(query)` - Search levels by query string
+- `getAllLevels()` - Get all levels
+- `clearCache()` - Clear the API cache
+
+See `api-example.html` for complete usage examples.
+
 ## License
 
 See LICENSE file for details.
