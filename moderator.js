@@ -380,7 +380,13 @@ function closeLevelModal() {
 function closeCopyModal() {
     document.getElementById('copyModal').style.display = 'none';
     editingCopyIndex = null;
+    const wasAddingNewLevel = editingCopyParentIndex === null && editingLevelIndex === null;
     editingCopyParentIndex = null;
+    
+    // If we were adding a new level, reopen the level modal
+    if (wasAddingNewLevel) {
+        document.getElementById('levelModal').style.display = 'flex';
+    }
 }
 
 // Search functionality
