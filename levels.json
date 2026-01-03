@@ -38,14 +38,14 @@
         "id": 98616917,
         "name": "Zodiac LDM",
         "creator": "Pointercrate",
-        "status": "rejected",
-        "reason": "LDM is too strong for modern standards. Additionally, this version does not contain 2.2 fixes."
+        "status": "approved"
       },
       {
         "id": 117313806,
         "name": "Zodiac ldm",
         "creator": "CaveMelv",
-        "status": "approved"
+        "status": "approved",
+        "reason": "Contains additional 2.2 fixes."
       }
     ]
   },
