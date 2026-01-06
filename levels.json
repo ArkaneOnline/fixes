@@ -9,7 +9,15 @@
     "id": 27690100,
     "name": "Slaughterhouse",
     "creator": "icedcave",
-    "copies": []
+    "copies": [
+      {
+        "id": 115044267,
+        "name": "slh delay startpos",
+        "creator": "bbeggo",
+        "status": "approved",
+        "reason": "LDM"
+      }
+    ]
   },
   {
     "id": 33498127,
@@ -38,14 +46,15 @@
         "id": 98616917,
         "name": "Zodiac LDM",
         "creator": "Pointercrate",
-        "status": "approved"
+        "status": "approved",
+        "reason": "LDM"
       },
       {
         "id": 117313806,
         "name": "Zodiac ldm",
         "creator": "CaveMelv",
         "status": "approved",
-        "reason": "Contains additional 2.2 fixes."
+        "reason": "LDM + 2.2 bugfix"
       }
     ]
   },
@@ -71,7 +80,21 @@
         "name": "Renevant LDM StartPo",
         "creator": "thegreatkala",
         "status": "approved",
-        "reason": "Contains 2.2 fixes."
+        "reason": "LDM + 2.2 bugfix"
+      },
+      {
+        "id": 69223483,
+        "name": "Renevant ldm",
+        "creator": "Spaceuk",
+        "status": "approved",
+        "reason": "LDM - No 2.2 bugfix"
+      },
+      {
+        "id": 121557076,
+        "name": "Renevant LDM BUGFIX",
+        "creator": "The RealAldaren",
+        "status": "approved",
+        "reason": "LDM + 2.2 bugfix"
       }
     ]
   },
@@ -102,7 +125,15 @@
         "id": 70019015,
         "name": "The Golden LDM HEX",
         "creator": "swiborg",
-        "status": "approved"
+        "status": "approved",
+        "reason": "LDM"
+      },
+      {
+        "id": 73229842,
+        "name": "The Golden LDM",
+        "creator": "AVALANCHA121",
+        "status": "approved",
+        "reason": "LDM"
       }
     ]
   },
@@ -122,7 +153,15 @@
     "id": 65588448,
     "name": "Fragile",
     "creator": "Endlevel",
-    "copies": []
+    "copies": [
+      {
+        "id": 130845407,
+        "name": "Fragile SP Fix",
+        "creator": "foodynooby",
+        "status": "approved",
+        "reason": "2.2 bugfix for a slope bug at 89."
+      }
+    ]
   },
   {
     "id": 69289606,
@@ -145,7 +184,15 @@
         "id": 117439690,
         "name": "SWI LDM STA",
         "creator": "TheRealJevan",
-        "status": "approved"
+        "status": "approved",
+        "reason": "LDM + 2.2 bugfix"
+      },
+      {
+        "id": 75068436,
+        "name": "SWI LDM",
+        "creator": "Dosh7t",
+        "status": "approved",
+        "reason": "LDM - No 2.2 bugfix"
       }
     ]
   },
@@ -164,7 +211,8 @@
         "id": 80352859,
         "name": "Trueffet LDM mine",
         "creator": "zZoink",
-        "status": "approved"
+        "status": "approved",
+        "reason": "LDM"
       }
     ]
   },
@@ -190,7 +238,15 @@
     "id": 72744364,
     "name": "Hard Machine",
     "creator": "Komp",
-    "copies": []
+    "copies": [
+      {
+        "id": 126339088,
+        "name": "Hard Machine LDM sta",
+        "creator": "BooKnQuiL",
+        "status": "approved",
+        "reason": "LDM"
+      }
+    ]
   },
   {
     "id": 73667628,
@@ -315,7 +371,15 @@
         "id": 115148853,
         "name": "LIMBO ULDM 2p2 fix",
         "creator": "Kolib24",
-        "status": "approved"
+        "status": "approved",
+        "reason": "LDM + 2.2 bugfix"
+      },
+      {
+        "id": 94258907,
+        "name": "LIMBO LDM",
+        "creator": "Pointercrate",
+        "status": "approved",
+        "reason": "LDM - No 2.2 bugfix"
       }
     ]
   },
@@ -402,7 +466,15 @@
     "id": 89496627,
     "name": "Avernus",
     "creator": "PockeWindfish",
-    "copies": []
+    "copies": [
+      {
+        "id": 119859433,
+        "name": "Avernus LDM my 123",
+        "creator": "SmartfonVIV0",
+        "status": "rejected",
+        "reason": "Removes a significant amount of the level's decoration."
+      }
+    ]
   },
   {
     "id": 90057148,
@@ -425,7 +497,8 @@
         "id": 90492731,
         "name": "Solar Flare LDM",
         "creator": "zZoink",
-        "status": "approved"
+        "status": "approved",
+        "reason": "LDM - Backgrounds do not appear from some positions"
       }
     ]
   },
@@ -511,7 +584,15 @@
     "id": 94156085,
     "name": "shimmer",
     "creator": "Amplitron",
-    "copies": []
+    "copies": [
+      {
+        "id": 110933010,
+        "name": "shimmer ldm sp",
+        "creator": "polniigd",
+        "status": "rejected",
+        "reason": "City part has too much removed detail."
+      }
+    ]
   },
   {
     "id": 94359172,
@@ -656,7 +737,15 @@
     "id": 106522770,
     "name": "Dry Out Copyable 2",
     "creator": "tenzk",
-    "copies": []
+    "copies": [
+      {
+        "id": 125786316,
+        "name": "DOC2 StartPos ldm",
+        "creator": "painguyn",
+        "status": "approved",
+        "reason": "LDM"
+      }
+    ]
   },
   {
     "id": 107238250,
@@ -710,7 +799,22 @@
     "id": 109947627,
     "name": "BPATA MPAKA",
     "creator": "Inex",
-    "copies": []
+    "copies": [
+      {
+        "id": 126340571,
+        "name": "BPATA MPAKA ldm",
+        "creator": "realvinnyboygd",
+        "status": "approved",
+        "reason": "LDM"
+      },
+      {
+        "id": 115123752,
+        "name": "BPATA MPAKA uldm sp",
+        "creator": "Uzesoff",
+        "status": "rejected",
+        "reason": "Removes a significant amount of the level's decoration."
+      }
+    ]
   },
   {
     "id": 110038200,
@@ -793,7 +897,15 @@
     "id": 112046512,
     "name": "Ascent",
     "creator": "Rimexon",
-    "copies": []
+    "copies": [
+      {
+        "id": 113710546,
+        "name": "Ascent ldm",
+        "creator": "neutraa",
+        "status": "rejected",
+        "reason": "Removes screen obstruction at 32%, removes excessive glow & details between 50-54%."
+      }
+    ]
   },
   {
     "id": 112231282,
@@ -811,7 +923,15 @@
     "id": 112313819,
     "name": "Anathema",
     "creator": "nikroplays",
-    "copies": []
+    "copies": [
+      {
+        "id": 112314429,
+        "name": "Anathema start pos",
+        "creator": "Mariner",
+        "status": "approved",
+        "reason": "Automatically enables in-level LDM"
+      }
+    ]
   },
   {
     "id": 112586799,
@@ -847,7 +967,22 @@
     "id": 113599729,
     "name": "Subterminal Point",
     "creator": "SyQual",
-    "copies": []
+    "copies": [
+      {
+        "id": 116291833,
+        "name": "Subterminal PointLDM",
+        "creator": "Pointercrate",
+        "status": "approved",
+        "reason": "LDM"
+      },
+      {
+        "id": 118235311,
+        "name": "Subterminal Point LD",
+        "creator": "voicechatping",
+        "status": "approved",
+        "reason": "LDM"
+      }
+    ]
   },
   {
     "id": 113959291,
@@ -870,7 +1005,8 @@
         "id": 126403376,
         "name": "andromeda ldm",
         "creator": "Serpentical",
-        "status": "approved"
+        "status": "approved",
+        "reason": "LDM"
       }
     ]
   },
