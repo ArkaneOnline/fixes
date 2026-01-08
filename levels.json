@@ -32,7 +32,28 @@
     "id": 45866767,
     "name": "Crimson Planet",
     "creator": "TrueOmega",
-    "copies": []
+    "copies": [
+      {
+        "id": 84866236,
+        "name": "CP OLDPC LDM",
+        "creator": "paqoe",
+        "status": "rejected",
+        "reason": "\"old one bad\" - zoe",
+        "tags": [
+          "LDM"
+        ]
+      },
+      {
+        "id": 84866238,
+        "name": "NEW CP LDM",
+        "creator": "paqoe",
+        "status": "approved",
+        "reason": "\"that one good\" - zoe",
+        "tags": [
+          "LDM"
+        ]
+      }
+    ]
   },
   {
     "id": 49896559,
