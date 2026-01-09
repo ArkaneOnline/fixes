@@ -215,14 +215,7 @@ function updatePagination() {
     
     let paginationHTML = '';
     
-    // Compact layout for all screen sizes: [⏮] [←] [1] [Current] [Last] [→] [⏭]
-    // First page button
-    paginationHTML += `
-        <button class="page-btn page-nav-btn" id="firstBtn" ${currentPage === 1 ? 'disabled' : ''} aria-label="First page">
-            ⏮
-        </button>
-    `;
-    
+    // Compact layout for all screen sizes: [←] [1] [Current] [Last] [→]
     // Previous button
     paginationHTML += `
         <button class="page-btn page-nav-btn" id="prevBtn" ${currentPage === 1 ? 'disabled' : ''} aria-label="Previous page">
@@ -260,26 +253,9 @@ function updatePagination() {
         </button>
     `;
     
-    // Last page button
-    paginationHTML += `
-        <button class="page-btn page-nav-btn" id="lastBtn" ${currentPage === totalPages ? 'disabled' : ''} aria-label="Last page">
-            ⏭
-        </button>
-    `;
-    
     pagination.innerHTML = paginationHTML;
     
     // Add event listeners
-    document.getElementById('firstBtn')?.addEventListener('click', () => {
-        if (currentPage > 1) {
-            currentPage = 1;
-            displayLevels(filteredLevels);
-            updateResultsCount(filteredLevels.length);
-            updatePagination();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    });
-    
     document.getElementById('prevBtn')?.addEventListener('click', () => {
         if (currentPage > 1) {
             currentPage--;
@@ -293,16 +269,6 @@ function updatePagination() {
     document.getElementById('nextBtn')?.addEventListener('click', () => {
         if (currentPage < totalPages) {
             currentPage++;
-            displayLevels(filteredLevels);
-            updateResultsCount(filteredLevels.length);
-            updatePagination();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    });
-    
-    document.getElementById('lastBtn')?.addEventListener('click', () => {
-        if (currentPage < totalPages) {
-            currentPage = totalPages;
             displayLevels(filteredLevels);
             updateResultsCount(filteredLevels.length);
             updatePagination();
