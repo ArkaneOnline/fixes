@@ -215,43 +215,39 @@ function updatePagination() {
     
     let paginationHTML = '';
     
-    // Previous button
+    // Compact layout for all screen sizes: [⏮] [←] [1] [Current] [Last] [→] [⏭]
+    // First page button
     paginationHTML += `
-        <button class="page-btn" id="prevBtn" ${currentPage === 1 ? 'disabled' : ''}>
-            ← Previous
+        <button class="page-btn page-nav-btn" id="firstBtn" ${currentPage === 1 ? 'disabled' : ''} aria-label="First page">
+            ⏮
         </button>
     `;
     
-    // Page numbers
-    const maxVisiblePages = 7;
-    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
-    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+    // Previous button
+    paginationHTML += `
+        <button class="page-btn page-nav-btn" id="prevBtn" ${currentPage === 1 ? 'disabled' : ''} aria-label="Previous page">
+            ←
+        </button>
+    `;
     
-    // Adjust start page if we're near the end
-    if (endPage - startPage < maxVisiblePages - 1) {
-        startPage = Math.max(1, endPage - maxVisiblePages + 1);
-    }
-    
-    // First page and ellipsis
-    if (startPage > 1) {
+    // Show first page if not current
+    if (currentPage > 1) {
         paginationHTML += `<button class="page-btn page-number" data-page="1">1</button>`;
-        if (startPage > 2) {
+        if (currentPage > 2) {
             paginationHTML += `<span class="page-ellipsis">...</span>`;
         }
     }
     
-    // Page number buttons
-    for (let i = startPage; i <= endPage; i++) {
-        paginationHTML += `
-            <button class="page-btn page-number ${i === currentPage ? 'active' : ''}" data-page="${i}">
-                ${i}
-            </button>
-        `;
-    }
+    // Show current page
+    paginationHTML += `
+        <button class="page-btn page-number active" data-page="${currentPage}">
+            ${currentPage}
+        </button>
+    `;
     
-    // Last page and ellipsis
-    if (endPage < totalPages) {
-        if (endPage < totalPages - 1) {
+    // Show last page if not current
+    if (currentPage < totalPages) {
+        if (currentPage < totalPages - 1) {
             paginationHTML += `<span class="page-ellipsis">...</span>`;
         }
         paginationHTML += `<button class="page-btn page-number" data-page="${totalPages}">${totalPages}</button>`;
@@ -259,14 +255,31 @@ function updatePagination() {
     
     // Next button
     paginationHTML += `
-        <button class="page-btn" id="nextBtn" ${currentPage === totalPages ? 'disabled' : ''}>
-            Next →
+        <button class="page-btn page-nav-btn" id="nextBtn" ${currentPage === totalPages ? 'disabled' : ''} aria-label="Next page">
+            →
+        </button>
+    `;
+    
+    // Last page button
+    paginationHTML += `
+        <button class="page-btn page-nav-btn" id="lastBtn" ${currentPage === totalPages ? 'disabled' : ''} aria-label="Last page">
+            ⏭
         </button>
     `;
     
     pagination.innerHTML = paginationHTML;
     
     // Add event listeners
+    document.getElementById('firstBtn')?.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage = 1;
+            displayLevels(filteredLevels);
+            updateResultsCount(filteredLevels.length);
+            updatePagination();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
+    
     document.getElementById('prevBtn')?.addEventListener('click', () => {
         if (currentPage > 1) {
             currentPage--;
@@ -280,6 +293,16 @@ function updatePagination() {
     document.getElementById('nextBtn')?.addEventListener('click', () => {
         if (currentPage < totalPages) {
             currentPage++;
+            displayLevels(filteredLevels);
+            updateResultsCount(filteredLevels.length);
+            updatePagination();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
+    
+    document.getElementById('lastBtn')?.addEventListener('click', () => {
+        if (currentPage < totalPages) {
+            currentPage = totalPages;
             displayLevels(filteredLevels);
             updateResultsCount(filteredLevels.length);
             updatePagination();
@@ -431,6 +454,15 @@ document.addEventListener('DOMContentLoaded', () => {
             ticking = true;
         }
     }, { passive: true });
+    
+    // Update pagination on window resize to adapt to screen size changes
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            updatePagination();
+        }, 150);
+    });
     
     // Initial check after page loads
     setTimeout(() => handleScroll(), 300);

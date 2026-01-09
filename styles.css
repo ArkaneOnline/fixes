@@ -469,15 +469,15 @@ header h1 {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
-    padding: 12px 20px;
+    gap: 6px;
+    padding: 10px 16px;
     background: rgba(20, 20, 25, 0.85);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 50px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     z-index: 1000;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
                 scale 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -490,17 +490,24 @@ header h1 {
 }
 
 .page-btn {
-    padding: 10px 16px;
+    padding: 8px 12px;
     background: rgba(15, 15, 20, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     color: #e0e0e0;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
     font-family: 'Nunito', sans-serif;
-    min-width: 44px;
+    min-width: 40px;
+}
+
+.page-nav-btn {
+    padding: 8px 10px;
+    min-width: 40px;
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 .page-btn:hover:not(:disabled) {
@@ -604,20 +611,44 @@ header h1 {
     }
 
     .pagination {
-        padding: 10px 16px;
-        gap: 6px;
-        bottom: 15px;
-        max-width: calc(100% - 30px);
+        padding: 8px 10px;
+        gap: 4px;
+        bottom: 10px;
+        max-width: calc(100% - 20px);
+        flex-wrap: nowrap;
+        justify-content: center;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .pagination::-webkit-scrollbar {
+        display: none;
     }
 
     .page-btn {
-        padding: 8px 12px;
-        font-size: 0.85rem;
-        min-width: 40px;
+        padding: 6px 8px;
+        font-size: 0.75rem;
+        min-width: 32px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .page-nav-btn {
+        padding: 6px 8px;
+        min-width: 32px;
+        font-size: 0.9rem;
+    }
+
+    .page-ellipsis {
+        padding: 6px 2px;
+        font-size: 0.75rem;
+        flex-shrink: 0;
     }
 
     .container {
-        padding-bottom: 80px;
+        padding-bottom: 70px;
     }
 }
 
