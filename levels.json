@@ -1151,6 +1151,17 @@
         "tags": [
           "LDM"
         ]
+      },
+      {
+        "id": 131136110,
+        "name": "andromeda LDM",
+        "creator": "Pointercrate",
+        "status": "approved",
+        "reason": "APPROVED 1/10/26",
+        "tags": [
+          "LDM",
+          "StartPos"
+        ]
       }
     ]
   },
