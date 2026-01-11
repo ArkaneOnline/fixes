@@ -58,8 +58,18 @@
         "id": 88831280,
         "name": "Crimson Planet SP",
         "creator": "PositionSwitch",
+        "status": "approved",
+        "reason": "Updated to comply with Pointercrate Guidelines.",
+        "tags": [
+          "StartPos"
+        ]
+      },
+      {
+        "id": 131225852,
+        "name": "Crimson Planet SP ol",
+        "creator": "PositionSwitch",
         "status": "rejected",
-        "reason": "Automatically applies an overly strong LDM",
+        "reason": "Old one that applied a really heavy LDM that is rejectable nowadays. Kept for perservation sake.",
         "tags": [
           "LDM",
           "StartPos"
