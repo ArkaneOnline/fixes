@@ -377,7 +377,18 @@
     "id": 75206202,
     "name": "Firework",
     "creator": "Trick",
-    "copies": []
+    "copies": [
+      {
+        "id": 105547415,
+        "name": "Firework fix",
+        "creator": "Hyperlith",
+        "status": "approved",
+        "reason": "Fixes 2.2 bugs.",
+        "tags": [
+          "Bugfix"
+        ]
+      }
+    ]
   },
   {
     "id": 75286957,
