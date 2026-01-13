@@ -1358,7 +1358,17 @@
     "id": 127023313,
     "name": "DISCONNECT",
     "creator": "MCres",
-    "copies": []
+    "copies": [
+      {
+        "id": 129388317,
+        "name": "Disconnect LDMChik",
+        "creator": "InferZone",
+        "status": "approved",
+        "tags": [
+          "LDM"
+        ]
+      }
+    ]
   },
   {
     "id": 127997391,
