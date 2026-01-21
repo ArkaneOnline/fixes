@@ -406,7 +406,18 @@
     "id": 76159410,
     "name": "Cosmic Cyclone",
     "creator": "APTeamOfficial",
-    "copies": []
+    "copies": [
+      {
+        "id": 87546720,
+        "name": "Cosmic Cyclone LDM",
+        "creator": "dosh7t",
+        "status": "approved",
+        "tags": [
+          "LDM",
+          "StartPos"
+        ]
+      }
+    ]
   },
   {
     "id": 76543324,
@@ -1194,6 +1205,15 @@
         "id": 118235311,
         "name": "Subterminal Point LD",
         "creator": "voicechatping",
+        "status": "approved",
+        "tags": [
+          "LDM"
+        ]
+      },
+      {
+        "id": 131798997,
+        "name": "Subterminal Point LD",
+        "creator": "Nachikoru",
         "status": "approved",
         "tags": [
           "LDM"
