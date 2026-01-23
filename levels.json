@@ -155,6 +155,7 @@
         "name": "Renevant ldm",
         "creator": "Spaceuk",
         "status": "approved",
+        "reason": "Does not have the 2.2 bugfix.",
         "tags": [
           "LDM"
         ]
@@ -243,13 +244,13 @@
     "creator": "Endlevel",
     "copies": [
       {
-        "id": 130845407,
-        "name": "Fragile SP Fix",
-        "creator": "foodynooby",
+        "id": 131384566,
+        "name": "Fragile LDM SP",
+        "creator": "GMDEyad",
         "status": "approved",
-        "reason": "2.2 bugfix for a slope bug at 89.",
         "tags": [
-          "Bugfix"
+          "LDM",
+          "StartPos"
         ]
       }
     ]
