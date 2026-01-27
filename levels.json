@@ -464,6 +464,15 @@
         "tags": [
           "Bugfix"
         ]
+      },
+      {
+        "id": 90940539,
+        "name": "Firework LDM",
+        "creator": "Pointercrate",
+        "status": "approved",
+        "tags": [
+          "LDM"
+        ]
       }
     ]
   },
